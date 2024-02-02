@@ -83,6 +83,18 @@
                                 @error('age') is-invalid @enderror>
                         </div>
                         <div class="mb-3">
+                            <label for="birthDateInput" class="form-label">
+                                Дата рождения
+                                @error('birth_date') <span class="invalid-feedback d-block">{{ $message }}</span> @enderror
+                            </label>
+                            <input type="date"
+                                   class="form-control"
+                                   name="birth_date"
+                                   id="birthDateInput"
+                                   value="{{ old('birth_date') }}"
+                                   @error('birth_date') is-invalid @enderror>
+                        </div>
+                        <div class="mb-3">
                             <div class="row">
                                 {{-- <div class="col-4">
                                     <label class="form-label">Укажите пол</label>
