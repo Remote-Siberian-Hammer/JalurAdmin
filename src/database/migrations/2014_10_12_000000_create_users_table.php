@@ -26,7 +26,7 @@ return new class extends Migration
             $table->float('height')->nullable();
             $table->integer('size_cloth')->nullable();
             $table->char('phone', 18)->unique(); // Пример:  +7 (999) 999-99-99
-            $table->string('email',)->unique()->nullable();
+            $table->string('email')->unique()->nullable();
             $table->string('code')->nullable();
             $table->string('password_admin')->nullable();
             $table->rememberToken();
